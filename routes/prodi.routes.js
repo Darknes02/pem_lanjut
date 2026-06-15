@@ -14,7 +14,7 @@ const router = express.Router();
 router.get("/", getAllProdi);
 
 // POST tambah prodi
-router.post("/", tambahprodisbaru, authenticateToken);
+router.post("/",authenticateToken, tambahprodisbaru );
 
 // GET prodi by ID
 router.get("/:id", cariProdiByID);
