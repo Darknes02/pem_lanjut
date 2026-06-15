@@ -6,6 +6,7 @@ import {
     updateProdi,
     deleteProdi
 } from "../controllers/prodi.controllers.js";
+import {authenticateToken} from "../middleware/verifytokens.js";
 
 const router = express.Router();
 
@@ -13,7 +14,7 @@ const router = express.Router();
 router.get("/", getAllProdi);
 
 // POST tambah prodi
-router.post("/", tambahprodisbaru);
+router.post("/", tambahprodisbaru, authenticateToken);
 
 // GET prodi by ID
 router.get("/:id", cariProdiByID);
