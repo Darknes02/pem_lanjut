@@ -23,7 +23,7 @@ router.post("/pengembalian", authenticateToken, pengembalianBuku);
 router.get("/laporanPengembalian",authenticateToken, laporanPengembalian);
 router.get("/dipinjam/:nim", cariBukuDipinjam);
 router.put("/return/all/:pinjam_id", returnAllBooks); // untuk mengembalikan semua
-router.get("/nim/:id", cariPinjamByNIM);
+router.get("/nim/:id", cariPinjamByNIM, authenticateToken);
 router.get("/:id", cariPinjamByID); 
 router.patch("/:id", updatePinjam); //buat mengubah data
 router.delete("/:id", deletePinjam); 

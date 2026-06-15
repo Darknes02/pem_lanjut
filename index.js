@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import db from "./config/db.config.js";
 import bukus from "./routes/buku.routes.js"
