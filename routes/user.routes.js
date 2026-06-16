@@ -5,7 +5,7 @@ import {
 import{ authenticateToken } from "../middleware/verifytokens.js";
 const routerUser = express.Router();
 routerUser.post("/",tambahuser);
-routerUser.post("/login",login);
+routerUser.post("/login",login, authenticateToken);
 routerUser.get("/dashboard", authenticateToken, (req, res) => {
     res.send("Welcome to the dashboard");
 });
