@@ -17,7 +17,7 @@ router.get("/", getAllProdi);
 router.post("/",authenticateToken, tambahprodisbaru );
 
 // GET prodi by ID
-router.get("/:id", cariProdiByID);
+router.get("/prodi/:kode_prodi", cariProdiByID);
 
 // UPDATE prodi
 router.patch("/:id", updateProdi);
