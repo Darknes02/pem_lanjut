@@ -21,6 +21,7 @@ export const tambahprodisbaru=async (req, res)=>{
 
 export const cariProdiByID=async (req, res)=>{
     try {
+        console.log("parameter ditrima:", req,params);
         const data= await Prodis.findAll({
             where:{ 
                 kode_prodi:req.params.kode_prodi
