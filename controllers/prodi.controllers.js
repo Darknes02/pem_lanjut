@@ -37,8 +37,8 @@ export const updateProdi = async (req, res) => {
     try {
         await Prodis.update(req.body, {
             where: {
-                kode_prodi: req.params.kode_prodi
-            }
+                kode_prodi: req.params.kode_prodi,
+            },
         });
         res.json({ "message": "Data Prodi berhasil diupdate" });
     } catch (error) {
@@ -50,8 +50,8 @@ export const deleteProdi = async (req, res) => {
     try {
         await Prodis.destroy({
             where: {
-                kode_prodi: req.params.kode_prodi
-            }
+                kode_prodi: req.params.kode_prodi,
+            },
         });
         res.json({ "message": "Data Prodi berhasil dihapus" });
     } catch (error) {
