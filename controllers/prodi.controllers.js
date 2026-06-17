@@ -24,7 +24,7 @@ export const cariProdiByID=async (req, res)=>{
         console.log("parameter ditrima:", req,params);
         const data= await Prodis.findAll({
             where:{ 
-                kode_prodi:req.params.kode_prodi
+                id:req.params.kode_prodi
             }
         });
         res.json(data[0]);
