@@ -12,17 +12,12 @@ const router = express.Router();
 
 // GET semua prodi
 router.get("/", getAllProdi);
-
 // POST tambah prodi
 router.post("/",authenticateToken, tambahprodisbaru );
-
 // GET prodi by ID
 router.get("/:id", cariProdiByID);
-
 // UPDATE prodi
 router.patch("/:id", updateProdi);
-
 // DELETE prodi
 router.delete("/:id", deleteProdi);
-
 export default router;
