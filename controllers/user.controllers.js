@@ -20,7 +20,7 @@ export const tambahuser = async (req, res) => {
 
 export const getAllUser = async (req, res) => {
   try {
-    const data = await Prodis.findAll();
+    const data = await Users.findAll();
     res.json(data);
   } catch (error) {
     res.json({ message: error.message });
