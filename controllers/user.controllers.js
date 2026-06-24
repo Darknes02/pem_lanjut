@@ -31,7 +31,7 @@ export const deleteUser = async (req, res) => {
   try {
     await Users.destroy({
       where: {
-        kode_user: req.params.kode_user,
+        id: req.params.id,
       },
     });
     res.json({ message: "Data User berhasil dihapus" });
