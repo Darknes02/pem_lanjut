@@ -17,6 +17,14 @@ export const tambahuser = async (req, res) => {
     res.json({ message: error.message });
   }
 };
+export const getAllUser = async (req, res) => {
+  try {
+    const data = await Prodis.findAll();
+    res.json(data);
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
 
 export const login = async (req, res) => {
   try {
