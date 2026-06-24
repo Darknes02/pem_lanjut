@@ -13,7 +13,7 @@ const router = express.Router();
 // GET semua prodi
 router.get("/", getAllProdi);
 // POST tambah prodi
-router.post("/",authenticateToken, tambahprodisbaru );
+router.post("/", tambahprodisbaru );
 // GET prodi by ID
 router.get("/:id", cariProdiByID);
 // UPDATE prodi

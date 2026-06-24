@@ -19,11 +19,11 @@ const router = express.Router();
 router.get("/", getAllPinjam); //minta data
 // router.post("/", tambahPinjambaru); //post itu untuk megnirim data
 router.post("/", insertPinjam);
-router.post("/pengembalian", authenticateToken, pengembalianBuku);
-router.get("/laporanPengembalian",authenticateToken, laporanPengembalian);
-router.get("/dipinjam/:nim", cariBukuDipinjam,authenticateToken);
+router.post("/pengembalian", pengembalianBuku);
+router.get("/laporanPengembalian", laporanPengembalian);
+router.get("/dipinjam/:nim", cariBukuDipinjam);
 router.put("/return/all/:pinjam_id", returnAllBooks); // untuk mengembalikan semua
-router.get("/nim/:id", cariPinjamByNIM, authenticateToken);
+router.get("/nim/:id", cariPinjamByNIM);
 router.get("/:id", cariPinjamByID); 
 router.patch("/:id", updatePinjam); //buat mengubah data
 router.delete("/:id", deletePinjam); 
