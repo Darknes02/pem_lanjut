@@ -31,10 +31,10 @@ export const deleteUser = async (req, res) => {
   try {
     await Users.destroy({
       where: {
-        kode_prodi: req.params.kode_prodi,
+        kode_user: req.params.kode_prodi,
       },
     });
-    res.json({ message: "Data Prodi berhasil dihapus" });
+    res.json({ message: "Data User berhasil dihapus" });
   } catch (error) {
     res.json({ message: error.message });
   }
