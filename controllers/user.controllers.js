@@ -27,6 +27,19 @@ export const getAllUser = async (req, res) => {
   }
 };
 
+export const deleteUser = async (req, res) => {
+  try {
+    await Users.destroy({
+      where: {
+        kode_prodi: req.params.kode_prodi,
+      },
+    });
+    res.json({ message: "Data Prodi berhasil dihapus" });
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
+
 export const login = async (req, res) => {
   try {
     const { username, password } = req.body;
