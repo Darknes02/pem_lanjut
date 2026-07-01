@@ -19,5 +19,5 @@ router.get("/:id", cariProdiByID);
 // UPDATE prodi
 router.patch("/:kode_prodi", updateProdi);
 // DELETE prodi
-router.delete("/:id", deleteProdi);
+router.delete("/:kode_prodi", deleteProdi);
 export default router;
