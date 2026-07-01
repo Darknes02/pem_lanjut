@@ -15,13 +15,13 @@ router.get("/", getAllMahasiswa);
 // POST tambah mahasiswa
 router.post("/", tambahmahasiswabaru);
 
-// GET mahasiswa by NIM
-router.get("/:id", cariMahasiswaByNIM);
+// GET mahasiswa by NIM (Diubah dari :id menjadi :nim)
+router.get("/:nim", cariMahasiswaByNIM);
 
-// UPDATE mahasiswa
-router.patch("/:id", updateMahasiswa);
+// UPDATE mahasiswa (Diubah dari :id menjadi :nim)
+router.patch("/:nim", updateMahasiswa);
 
-// DELETE mahasiswa
-router.delete("/:id", deleteMahasiswa);
+// DELETE mahasiswa (Diubah dari :id menjadi :nim)
+router.delete("/:nim", deleteMahasiswa);
 
 export default router;
