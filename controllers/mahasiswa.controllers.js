@@ -5,7 +5,10 @@ import ref_prodi from "../models/prodi.model.js";
 export const getAllMahasiswa=async (req, res)=>{
     try {
         const data= await Mahasiswas.findAll({
-            include:{model:ref_prodi, //include buat nampilin lrbih detsil di mahasiswa
+            include:
+            {
+                model:ref_prodi, 
+                as:'ref_prodi',//include buat nampilin lrbih detsil di mahasiswa
                 attributes:['nama_prodi']}, 
         });
         res.json(data);
