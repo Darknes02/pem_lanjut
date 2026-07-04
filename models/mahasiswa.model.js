@@ -37,7 +37,7 @@ const Mahasiswas = db.define("mahasiswas", {
 // === TAMBAHKAN KODE RELASI INI ===
 Mahasiswas.belongsTo(ref_prodi, {
     foreignKey: "prodi_id", // Kolom foreign key yang ada di tabel mahasiswas
-    as: "prodi"            // Alias tunggal (opsional, sesuaikan dengan include di controller)
+    as: "ref_prodi"            // Alias tunggal (opsional, sesuaikan dengan include di controller)
 });
 
 export default Mahasiswas;
