@@ -30,7 +30,7 @@ export const cariMahasiswaByNIM=async (req, res)=>{
     try {
         const data= await Mahasiswas.findAll({
             where:{ 
-                nim:req.params.id
+                nim:req.params.nim
             }
         });
         res.json(data[0]);
@@ -56,7 +56,7 @@ export const deleteMahasiswa = async (req, res) => {
     try {
         await Mahasiswas.destroy({
             where: {
-                nim: req.params.id
+                nim: req.params.nim
             }
         });
         res.json({ "message": "Data Mahasiswa berhasil dihapus" });
