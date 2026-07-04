@@ -34,5 +34,10 @@ const Mahasiswas = db.define("mahasiswas", {
 },{
     freezeTableName: true,
 });
+// === TAMBAHKAN KODE RELASI INI ===
+Mahasiswas.belongsTo(ref_prodi, {
+    foreignKey: "prodi_id", // Kolom foreign key yang ada di tabel mahasiswas
+    as: "prodi"            // Alias tunggal (opsional, sesuaikan dengan include di controller)
+});
 
 export default Mahasiswas;
